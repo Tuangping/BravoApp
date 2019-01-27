@@ -1,5 +1,7 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  var cnv = createCanvas(windowWidth, windowHeight);
+cnv.style('display', 'block');
+background(255, 0, 200);
 }
 
 function draw() {
@@ -9,9 +11,8 @@ function draw() {
   fill("BLACK");
   text("This is Bravo App. and we will connect it to Sqaure.",30,200);
   text("Also, testing fullscreen right now. No scrollbar",30,220);
-  text("fullscreen", innerWidth/2,innerHeight/2);
+  text("fullscreen 3", innerWidth/2,innerHeight/2);
 }
-
-function button(){
-
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
