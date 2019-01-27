@@ -9,6 +9,7 @@ function draw() {
   fill("BLACK");
   text("This is Bravo App. and we will connect it to Sqaure.",30,200);
   text("Also, testing fullscreen right now. No scrollbar",30,220);
+  text("fullscreen", innerWidth/2,innerHeight/2);
 }
 
 function button(){
