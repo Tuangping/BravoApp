@@ -1,11 +1,17 @@
+let img;
+function preload() {
+  img = loadImage('map.png');
+}
 function setup() {
   var cnv = createCanvas(windowWidth, windowHeight);
 cnv.style('display', 'block');
-background(255, 0, 200);
+//background(255, 0, 200);
+image(img,0,0);
 }
 
 function draw() {
-  background(220);
+  //background(220);
+  image(img,0,0);
   fill(255,0,0);
   rect(30,30,100,100);
   fill("BLACK");
