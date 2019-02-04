@@ -6,7 +6,7 @@ function preload() {
 
 function setup() {
   var cnv = createCanvas(windowWidth, windowHeight);
- cnv.style('display','block');
+ cnv.style('display','inline-block');
 }
 function draw() {
  image(img, 0, 0, windowWidth, windowHeight);

@@ -20,8 +20,7 @@ img{
   object-fit: cover;
 }
 canvas {
-
-  display: block;
+  display: inline-block;
   position:absolute;
   z-index:1;
 
