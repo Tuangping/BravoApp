@@ -20,11 +20,18 @@ img{
   object-fit: cover;
 }
 canvas {
+
   display: block;
+  position:absolute;
+  z-index:1;
+
 }
 h1{
   font-size: 30px;
   color:#8B572A;
+}
+#p5Container{
+
 }
 #container {
     position: relative;
