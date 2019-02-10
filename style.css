@@ -84,32 +84,6 @@ h2{
     box-shadow: 0 0 3px gray;
 
 }
-.btn-confirm{
-    position: absolute;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    width:273px;
-    height:77px;
-    bottom:18%;
-    background-image: url("data/icon/confirm.png");
-    background-repeat: no-repeat;
-    border-radius: 25px 25px 25px 25px;
-    box-shadow: -3px 3px 13px 2px rgba(0,0,0,0.50);
-}
-.btn-exit{
-  text-align: center;
-  position: absolute;
-  bottom:10%;
-  margin: 0;
-}
-.btn-end{
-  text-align: center;
-  position: absolute;
-  right:10px;
-  bottom:10%;
-  margin: 0;
-}
 #container {
     position: relative;
     top: 5%;
@@ -184,16 +158,44 @@ h2{
   margin: 0;
 }
 .rectangle {
-    display:inline-block;
-    position:sticky;
+    display:block;
+    position:absolute;
     width:95%;
     height:30%;
+    right:0;
     bottom:0;
     margin: 0 auto;
     border-radius: 15px 15px 0px 0px;
     background: #FFFFFF;
     box-shadow: -3px 3px 13px 2px rgba(0,0,0,0.50);
 }
+.btn-confirm{
+    position: absolute;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    width:273px;
+    height:77px;
+    bottom:18%;
+    background-image: url("data/icon/confirm.png");
+    background-repeat: no-repeat;
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: -3px 3px 13px 2px rgba(0,0,0,0.50);
+}
+.btn-exit{
+  text-align: center;
+  position: absolute;
+  bottom:10%;
+  margin: 0;
+}
+.btn-end{
+  text-align: center;
+  position: absolute;
+  right:10px;
+  bottom:10%;
+  margin: 0;
+}
+
 .rectVideo {
     display:inline-block;
     position:sticky;
