@@ -19,16 +19,6 @@ img{
   width:100%; height:100%;
   object-fit: cover;
 }
-canvas {
-  display: inline-block;
-  position:absolute;
-  z-index:1;
-
-}
-h1{
-  font-size: 30px;
-  color:#8B572A;
-}
 #p5Container{
 
 }
@@ -53,14 +43,17 @@ h1{
   max-width: 50%;
   max-height: 50%;
 }
-#rectangle {
+.rectangle {
+    display: inline-block;
+    position:sticky;
+    width:95%;
+    height:30%;
+    bottom:0;
+    margin: 0 auto;
     border-radius: 15px 15px 0px 0px;
     background: #FFFFFF;
     box-shadow: -3px 3px 13px 2px rgba(0,0,0,0.50);
-    width:95%;
-    height:30%;
-    position:absolute;
-    bottom:0;
+
 }
 .resizeRideTitle{
   position: absolute;
@@ -78,6 +71,12 @@ h1{
 #rideTitle_3{
   margin-left: 130px;
 }
+.page-container{
+  position:absolute; width:100vw; height:100vh; top:0; left: 100vw;
+  opacity:0; transition:.4s all; text-align:center;
+}
+.page-container.active{opacity:1; left:0;}
+
 .round-button {
     position: absolute;
     left: 70%;

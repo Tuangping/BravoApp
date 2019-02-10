@@ -3,8 +3,9 @@
 
   <head>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>-->
+    <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
     <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
     -->
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -13,22 +14,55 @@
 <!--    charset="utf-8"-->
 <!--   <meta charset="utf-8" /> -->
   </head>
-  <body>
+  <body style="width:100vw; height:100vh; overflow:hidden;">
+    <script src ="javaScript.js"></script>
     <!--<img src="welcome_background.png" alt="map" > -->
+    <div class="page-container active" id="page0">
     <img src="data/image/map.png" alt="">
-      <div id="rectangle" >
+      <div class="rectangle" >
         <div id="carContainer">
           <img id="resize" src="data/model/car_1.png" alt="">
         </div>
         <div id="container">
         <img id = "resizeWelcome" src="data/image/welcome_text.png" alt="">
         </div>
-        <a href="http://example.com" class="round-button butt-r1"></a>
-        <a href="http://example.com" class="round-button butt-r2"></a>
-        <a href="http://example.com" class="round-button butt-r3"></a>
+        <a class="round-button butt-r1" href="javascript:"></a>
+        <a class="round-button butt-r2"href="javascript:"></a>
+        <a class="round-button butt-r3"href="javascript:"></a>
         <img id= "rideTitle_1" class= "resizeRideTitle" src="data/icon/BView.png" alt="">
         <img id= "rideTitle_2" class= "resizeRideTitle" src="data/icon/BRide.png" alt="">
         <img id= "rideTitle_3" class= "resizeRideTitle" src="data/icon/BDrive.png" alt="">
+      </div>
+      </div>
+
+      <div class="page-container" id="page1" style="background:orange;">
+        <a class="btn-exit" href="javascript:">Exit</a>
+        <p>BView description and so on... bhla bhlaaa</p>
+        <a class="btn-confirm" href="javascript:">Confirm</a>
+      </div>
+
+      <div class="page-container" id="page2" style="background:green;">
+        <a class="btn-exit" href="javascript:">Exit</a>
+        <p>BRide description and so on... bhla bhlaaa</p>
+        <a class="btn-confirm" href="javascript:">Confirm</a>
+      </div>
+
+      <div class="page-container" id="page3" style="background:lightblue;">
+        <a class="btn-exit" href="javascript:">Exit</a>
+        <p>BDrive description and so on... bhla bhlaaa</p>
+        <a class="btn-confirm" href="javascript:">Confirm</a>
+      </div>
+
+      <div class="page-container" id="page4" style="background:red;">
+        <a class="btn-exit" href="javascript:">Exit</a>
+        <p>Video map is playing right here</p>
+        <a class="btn-end" href="javascript:">End ride</a>
+      </div>
+
+      <div class="page-container" id="page5" style="background:yellow;">
+        <a class="btn-exit" href="javascript:">Exit</a>
+        <p>You pay money here, swipe card please</p>
+        <a class="btn-pay" href="javascript:">Ready to pay</a>
       </div>
       <!--<script src ="sketch.js"></script>-->
   </body>
