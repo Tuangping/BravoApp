@@ -2,10 +2,11 @@
     font-family: "AvenirNext";
     src: url('data/font/avenir-next-regular.ttf') format("truetype");
 }
+
 html, body {
     width:100%;
     height: 100%;
-    overflow: hidden
+    overflow: hidden;
   }
 /*style="width:100%; height:100%; overflow:hidden;"*/
   body {
@@ -21,6 +22,10 @@ html, body {
 
 img{
   display:block;
+  width:100%; height:100%;
+  object-fit: cover;
+}
+video{
   width:100%; height:100%;
   object-fit: cover;
 }
@@ -202,13 +207,14 @@ h2{
   bottom:10%;
   margin: 0;
 }
-
 .rectVideo {
-    display:inline-block;
-    position:sticky;
+    display:block;
+    position:absolute;
     width:95%;
     height:15%;
     bottom:0;
+    left:0;
+    right:0;
     margin: 0 auto;
     border-radius: 15px 15px 0px 0px;
     background: #FFFFFF;
@@ -230,10 +236,17 @@ h2{
 #rideTitle_3{
   margin-left: 130px;
 }
+
 #myVideo{
-  position:sticky;
-  right:0;
-  bottom:0;
-  max-width: 150%;
-  max-height: 150%;
+  position:absolute;
+  display: block;
+  top:0;
+  left:-10;
+  right:-10;
+  margin: 0 auto;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
 }
