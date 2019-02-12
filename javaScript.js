@@ -43,7 +43,7 @@ $(document).ready(function(){
     $('.page-container#page'+page).append('<iframe width="1000" height="500" style="z-index:100;" src="readytoPay.html"></iframe>');
     var dataParameter = {
       amount_money: {
-        amount:        "2",
+        amount:        "100",
         currency_code: "USD"
       },
 
