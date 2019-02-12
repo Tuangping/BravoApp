@@ -40,6 +40,6 @@ $(document).ready(function(){
   });
   $('.btn-pay').click(function(e){
     e.preventDefault();
-    $('.page-container#page'+page).append('<iframe width="1000" height="500" style="z-index:100;" src="https:www.example.com"></iframe>');
+    $('.page-container#page'+page).append('<iframe width="1000" height="500" style="z-index:100;" src="readytoPay.html"></iframe>');
   });
 });
