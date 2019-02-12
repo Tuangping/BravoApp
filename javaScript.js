@@ -48,7 +48,7 @@ $(document).ready(function(){
       },
 
       // Replace this value with your application's callback URL
-      callback_url: "readytoPay.html",
+      callback_url: "https://tuangping.github.io/bravoapp/readytoPay.html",
 
       // Replace this value with your application's ID
       client_id: "sq0idp-FlAazmCX59x2_GX2DstntA",
@@ -59,7 +59,7 @@ $(document).ready(function(){
         supported_tender_types: ["CREDIT_CARD","CASH","OTHER","SQUARE_GIFT_CARD","CARD_ON_FILE"]
       }
     };
-    window.location =
+//    window.location =
       "square-commerce-v1://payment/create?data=" +
       encodeURIComponent(JSON.stringify(dataParameter));
   });
