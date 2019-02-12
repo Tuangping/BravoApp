@@ -41,5 +41,27 @@ $(document).ready(function(){
   $('.btn-pay').click(function(e){
     e.preventDefault();
     $('.page-container#page'+page).append('<iframe width="1000" height="500" style="z-index:100;" src="readytoPay.html"></iframe>');
+    var dataParameter = {
+      amount_money: {
+        amount:        "1.5",
+        currency_code: "USD"
+      },
+
+      // Replace this value with your application's callback URL
+      callback_url: "https://tuangping.github.io/bravoapp/readytoPay.html",
+
+      // Replace this value with your application's ID
+      client_id: "sq0idp-FlAazmCX59x2_GX2DstntA",
+
+      version: "1.3",
+      notes: "You are a great customer. BRAVO!!",//notes for the transaction
+      options: {
+        supported_tender_types: ["CREDIT_CARD","CASH","OTHER","SQUARE_GIFT_CARD","CARD_ON_FILE"]
+      }
+    };
+
+    window.location =
+      "square-commerce-v1://payment/create?data=" +
+      encodeURIComponent(JSON.stringify(dataParameter));
   });
 });
