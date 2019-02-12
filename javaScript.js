@@ -43,7 +43,7 @@ $(document).ready(function(){
     $('.page-container#page'+page).append('<iframe width="1000" height="500" style="z-index:100;" src="readytoPay.html"></iframe>');
     var dataParameter = {
       amount_money: {
-        amount:        "1.5",
+        amount:        "2",
         currency_code: "USD"
       },
 
@@ -60,6 +60,7 @@ $(document).ready(function(){
       }
     };
 //    window.location =
+      location.href=
       "square-commerce-v1://payment/create?data=" +
       encodeURIComponent(JSON.stringify(dataParameter));
   });
