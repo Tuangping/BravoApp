@@ -9,7 +9,6 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
     -->
     <link rel="stylesheet" type="text/css" href="style.css">
-
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -25,8 +24,10 @@
     <div class="page-container active" id="page0">
     <img src="data/image/map.png" alt="" z-index="-1">
       <div class="rectangle" >
+          amount_money.amount= rideCost;
         <div class="carContainer">
           <img id="resize" src="data/model/car_1.png" alt="">
+
         </div>
         <div id="container">
         <img id = "resizeWelcome" src="data/image/welcome_text.png" alt="">
@@ -116,9 +117,12 @@
       </div>
       <div class="page-container" id="page5" style="background:yellow;">
         <p>You pay money here, swipe card please</p>
-        <a class="btn-pay" href="javascript:">Ready to pay</a>
-        <a class="btn-restart" href="javascript:">Exit</a>
+        <a class="btn-pay" href="javascript:">Ready to pay</a><br>
+        <a class="btn-restart" href="javascript:">Exit</a><br>
+        <div id="rideCost">xxxxx
+        </div>
       </div>
+
 
       <!--<script src ="sketch.js"></script>-->
   </body>

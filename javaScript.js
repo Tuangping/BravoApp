@@ -1,13 +1,18 @@
+
 $(document).ready(function(){
+  var rideCost = 120;
   var page = 0,
       pageContainers = $('.page-container');
-  var rideCost= 0;
+
   $('.round-button.butt-r1').click(function(e){
     e.preventDefault();
     page = 1;
     rideCost= 139;
     pageContainers.removeClass('active');
     $('.page-container#page'+page).addClass('active');
+    console.log(rideCost);
+    console.log(page);
+
   });
   $('.round-button.butt-r2').click(function(e){
     e.preventDefault();
@@ -15,6 +20,8 @@ $(document).ready(function(){
     rideCost= 250;
     pageContainers.removeClass('active');
     $('.page-container#page'+page).addClass('active');
+    console.log(rideCost);
+    console.log(page);
   });
   $('.round-button.butt-r3').click(function(e){
     e.preventDefault();
@@ -22,6 +29,8 @@ $(document).ready(function(){
     rideCost= 302;
     pageContainers.removeClass('active');
     $('.page-container#page'+page).addClass('active');
+    console.log(rideCost);
+    console.log(page);
   });
   $('.btn-exit').click(function(e){
     e.preventDefault();
@@ -31,7 +40,7 @@ $(document).ready(function(){
   });
   $('.btn-restart').click(function(e){
     e.preventDefault();
-    document.getElementById( 'myframe' ).setAttribute( 'src', '' );
+    // document.getElementById( 'myframe' ).setAttribute( 'src', '' );
     $('iframe').remove();
     page = 0;
     pageContainers.removeClass('active');
@@ -50,8 +59,11 @@ $(document).ready(function(){
       $('.page-container#page'+page).addClass('active');
   });
   $('.btn-pay').click(function(e){
+    console.log("total: "+rideCost);
+    console.log("lastpage: "+page);
     e.preventDefault();
     $('.page-container#page'+page).append('<iframe id="myframe" width="1000" height="500" style="z-index:100;" src="readytoPay.html"></iframe>');
+    document.getElementById('rideCost').innerHTML = rideCost;
     var dataParameter = {
       amount_money: {
           amount:        "", //2 digit decimal 100 = $1. Square App minimum payment is $1.
@@ -74,5 +86,6 @@ $(document).ready(function(){
       location.href=
       "square-commerce-v1://payment/create?data=" +
       encodeURIComponent(JSON.stringify(dataParameter));
+
   });
 });
