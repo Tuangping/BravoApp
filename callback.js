@@ -1,10 +1,10 @@
-//If successful, Square Point of Sale returns the following parameters.
+// If successful, Square Point of Sale returns the following parameters.
 
 const clientTransactionId = "client_transaction_id";
 const transactionId = "transaction_id";
 
 //If there's an error, Square Point of Sale returns the following parameters.
-const errorField = "error_code";
+const errorField = "";
 //get the data URL and encode in JSON
 function getTransactionInfo(URL) {
     var data = decodeURI(URL.searchParams.get("data"));
@@ -33,7 +33,7 @@ function handleSuccess(transactionInfo){
 
 // Makes an error string for error situation
 function handleError(transactionInfo){
-  var resultString ="";
+  var resultString ="error";
 
   if (errorField in transactionInfo) {
     resultString += "Client Transaction ID: " + transactionInfo[clientTransactionId] + "<br>";
@@ -48,7 +48,7 @@ function handleError(transactionInfo){
 }
 // Determines whether error or success based on urlParams, then prints the string
 function printResponse() {
-  var responseUrl = location.href;
+  var responseUrl = location.href; //orginal line is   var responseUrl = window.location.href;
   var transactionInfo = getTransactionInfo(responseUrl);
   var resultString = "";
 
@@ -57,6 +57,10 @@ function printResponse() {
   } else {
     resultString = handleSuccess(transactionInfo);
   }
-
   document.getElementById('url').innerHTML = resultString;
+  // document.getElementById('url').innerHTML = "resultString";
+}
+
+function  testString(){
+  document.getElementById('url').innerHTML = "test string in url div";
 }
