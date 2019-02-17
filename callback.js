@@ -56,7 +56,7 @@ function handleError(transactionInfo){
 }
 // Determines whether error or success based on urlParams, then prints the string
 function printResponse() {
-  var responseUrl = location.href; //orginal line is   var responseUrl = window.location.href;
+  var responseUrl = "https://tuangping.github.io/bravoapp"; //orginal line is   var responseUrl = window.location.href;
   var transactionInfo = getTransactionInfo(responseUrl);
   var resultString = "";
 

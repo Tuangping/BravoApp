@@ -64,7 +64,6 @@ $(document).ready(function(){
     document.getElementById('rideCost').innerHTML = rideCost;
     console.log("lastpage: "+page);
     callSquare();
-
   });
 });
 
