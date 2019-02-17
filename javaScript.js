@@ -59,14 +59,14 @@ $(document).ready(function(){
       $('.page-container#page'+page).addClass('active');
   });
   $('.btn-pay').click(function(e){
-    console.log("total: "+rideCost);
-    console.log("lastpage: "+page);
     e.preventDefault();
     $('.page-container#page'+page).append('<iframe id="myframe" width="1000" height="500" style="z-index:100;" src="readytoPay.html"></iframe>');
     document.getElementById('rideCost').innerHTML = rideCost;
+    console.log("total: "+rideCost);
+    console.log("lastpage: "+page);
     var dataParameter = {
       amount_money: {
-          amount:        "", //2 digit decimal 100 = $1. Square App minimum payment is $1.
+          amount:        "125", //2 digit decimal 100 = $1. Square App minimum payment is $1.
           currency_code: "USD"
       },
       // Replace this value with your application's callback URL
@@ -81,7 +81,6 @@ $(document).ready(function(){
         supported_tender_types: ["CREDIT_CARD","CASH","OTHER","SQUARE_GIFT_CARD","CARD_ON_FILE"]
       }
     };
-    amount_money.amount= rideCost;
 //    window.location =
       location.href=
       "square-commerce-v1://payment/create?data=" +
