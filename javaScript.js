@@ -1,6 +1,6 @@
-
+var rideCost = 120;
 $(document).ready(function(){
-  var rideCost = 120;
+
   var page = 0,
       pageContainers = $('.page-container');
 
@@ -62,29 +62,35 @@ $(document).ready(function(){
     e.preventDefault();
     $('.page-container#page'+page).append('<iframe id="myframe" width="1000" height="500" style="z-index:100;" src="readytoPay.html"></iframe>');
     document.getElementById('rideCost').innerHTML = rideCost;
-    console.log("total: "+rideCost);
     console.log("lastpage: "+page);
-    var dataParameter = {
-      amount_money: {
-          amount:        "125", //2 digit decimal 100 = $1. Square App minimum payment is $1.
-          currency_code: "USD"
-      },
-      // Replace this value with your application's callback URL
-      callback_url: "https://tuangping.github.io/bravoapp",
-
-      // Replace this value with your application's ID
-      client_id: "sq0idp-FlAazmCX59x2_GX2DstntA",
-
-      version: "1.3",
-      notes: "You are a great customer. BRAVO!!",//notes for the transaction
-      options: {
-        supported_tender_types: ["CREDIT_CARD","CASH","OTHER","SQUARE_GIFT_CARD","CARD_ON_FILE"]
-      }
-    };
-//    window.location =
-      location.href=
-      "square-commerce-v1://payment/create?data=" +
-      encodeURIComponent(JSON.stringify(dataParameter));
+    callSquare();
 
   });
 });
+
+function callSquare(){
+  console.log("total: "+rideCost);
+  var dataParameter = {
+    amount_money: {
+        amount:        "", //2 digit decimal 100 = $1. Square App minimum payment is $1.
+        currency_code: "USD"
+    },
+    // Replace this value with your application's callback URL
+    callback_url: "https://tuangping.github.io/bravoapp",
+
+    // Replace this value with your application's ID
+    client_id: "sq0idp-FlAazmCX59x2_GX2DstntA",
+
+    version: "1.3",
+    notes: "You are a great customer. BRAVO!!",//notes for the transaction
+    options: {
+      supported_tender_types: ["CREDIT_CARD","CASH","OTHER","SQUARE_GIFT_CARD","CARD_ON_FILE"]
+    }
+  };
+  dataParameter.amount_money.amount = rideCost;
+//    window.location =
+    location.href=
+    "square-commerce-v1://payment/create?data=" +
+    encodeURIComponent(JSON.stringify(dataParameter));
+    console.log("amount_money: "+ dataParameter.amount_money.amount);
+}
