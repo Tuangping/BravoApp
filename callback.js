@@ -2,6 +2,14 @@
 
 const clientTransactionId = "client_transaction_id";
 const transactionId = "transaction_id";
+const responseUrl = new URL(
+  '/create?data={' +
+    '"transaction_id":"transaction123",' +
+    '"client_transaction_id":"40",' +
+    '"status":"ok"' +
+  '}',
+  'https://squareup.com'
+);
 
 //If there's an error, Square Point of Sale returns the following parameters.
 const errorField = "";
@@ -48,7 +56,7 @@ function handleError(transactionInfo){
 }
 // Determines whether error or success based on urlParams, then prints the string
 function printResponse() {
-  var responseUrl = location.href; //orginal line is   var responseUrl = window.location.href;
+  // var responseUrl = location.href; //orginal line is   var responseUrl = window.location.href;
   var transactionInfo = getTransactionInfo(responseUrl);
   var resultString = "";
 
