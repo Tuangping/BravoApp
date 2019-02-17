@@ -48,7 +48,7 @@ function handleError(transactionInfo){
 }
 // Determines whether error or success based on urlParams, then prints the string
 function printResponse() {
-  var responseUrl = window.location.href;
+  var responseUrl = location.href;
   var transactionInfo = getTransactionInfo(responseUrl);
   var resultString = "";
 
