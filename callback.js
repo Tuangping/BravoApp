@@ -33,7 +33,7 @@ function handleSuccess(transactionInfo){
 
 // Makes an error string for error situation
 function handleError(transactionInfo){
-  var resultString ="error";
+  var resultString ="";
 
   if (errorField in transactionInfo) {
     resultString += "Client Transaction ID: " + transactionInfo[clientTransactionId] + "<br>";

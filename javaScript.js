@@ -48,7 +48,7 @@ $(document).ready(function(){
       },
 
       // Replace this value with your application's callback URL
-      callback_url: "https://tuangping.github.io/bravoapp/readytoPay.html",
+      callback_url: "https://tuangping.github.io/bravoapp",
 
       // Replace this value with your application's ID
       client_id: "sq0idp-FlAazmCX59x2_GX2DstntA",
