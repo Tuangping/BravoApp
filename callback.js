@@ -21,7 +21,6 @@ function getTransactionInfo(URL) {
     var transactionInfo = JSON.parse(data);
     return transactionInfo;
   }
-
   // Makes a result string for success situation
 function handleSuccess(transactionInfo){
   var resultString ="";
