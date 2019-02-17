@@ -26,6 +26,14 @@ $(document).ready(function(){
     pageContainers.removeClass('active');
     $('.page-container#page'+page).addClass('active');
   });
+  $('.btn-restart').click(function(e){
+    e.preventDefault();
+    document.getElementById( 'myframe' ).setAttribute( 'src', '' );
+    $('iframe').remove();
+    page = 0;
+    pageContainers.removeClass('active');
+    $('.page-container#page'+page).addClass('active');
+  });
   $('.btn-confirm').click(function(e){
       e.preventDefault();
       page = 4;
@@ -40,7 +48,7 @@ $(document).ready(function(){
   });
   $('.btn-pay').click(function(e){
     e.preventDefault();
-    // $('.page-container#page'+page).append('<iframe width="1000" height="500" style="z-index:100;" src="readytoPay.html"></iframe>');
+    $('.page-container#page'+page).append('<iframe id="myframe" width="1000" height="500" style="z-index:100;" src="readytoPay.html"></iframe>');
     var dataParameter = {
       amount_money: {
         amount:        "100", //2 digit decimal 100 = $1. Square App minimum payment is $1.
