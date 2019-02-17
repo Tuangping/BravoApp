@@ -1,5 +1,10 @@
 var rideCost = 120;
 var rideCost_ui = "$1.20";
+var now = new Date();
+var endSecond = 600;
+var timeup = now.setSeconds(now.getSeconds() + endSecond);
+//var timeup = now.setHours(now.getHours() + 1);
+var counter = setInterval(timer, 1000);
 $(document).ready(function(){
 
   var page = 0,
@@ -52,12 +57,17 @@ $(document).ready(function(){
   });
   $('.btn-confirm').click(function(e){
       e.preventDefault();
+      timeup = now.setSeconds(now.getSeconds() + endSecond);
+      counter = setInterval(timer, 1000);
+      console.log(now.setSeconds+ " / "+ timeup);
+      timer();
       page = 4;
       pageContainers.removeClass('active');
       $('.page-container#page'+page).addClass('active');
   });
   $('.btn-end').click(function(e){
       e.preventDefault();
+      clearInterval(counter);
       page = 5;
       pageContainers.removeClass('active');
       $('.page-container#page'+page).addClass('active');
@@ -92,8 +102,23 @@ function callSquare(){
   };
   dataParameter.amount_money.amount = rideCost;
 //    window.location =
-    location.href=
+    window.location =
     "square-commerce-v1://payment/create?data=" +
     encodeURIComponent(JSON.stringify(dataParameter));
     console.log("amount_money: "+ dataParameter.amount_money.amount);
 }
+
+function timer() {
+  now = new Date();
+  count = Math.round((timeup - now)/1000);
+  if (now > timeup) {
+      //window.location = "/logout"; //or somethin'
+      document.getElementById("timer").innerHTML = "now is at the end of the road";
+      clearInterval(counter);
+      return;
+  }
+  var seconds = Math.floor((count%60));
+  var minutes = Math.floor((count/60) % 60);
+  document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+}
+console.log(now.setSeconds(now.getSeconds())+ " / "+ timeup);

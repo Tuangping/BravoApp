@@ -10,9 +10,8 @@ const transactionId = "transaction_id";
 //   '}',
 //   'https://squareup.com'
 // );
-
 //If there's an error, Square Point of Sale returns the following parameters.
-const errorField = "";
+const errorField = "error_code";
 //get the data URL and encode in JSON
 function getTransactionInfo(URL) {
     var data = decodeURI(URL.searchParams.get("data"));
@@ -55,7 +54,7 @@ function handleError(transactionInfo){
 }
 // Determines whether error or success based on urlParams, then prints the string
 function printResponse() {
-  var responseUrl = location.href //orginal line is   var responseUrl = window.location.href;
+  var responseUrl = window.location.href;//orginal line is   var responseUrl = window.location.href;
   var transactionInfo = getTransactionInfo(responseUrl);
   var resultString = "";
 

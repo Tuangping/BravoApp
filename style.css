@@ -77,6 +77,15 @@ h2{
   font-weight: bold;
   font-size: 20;
 }
+p{
+  color: #8A4B08;
+}
+h3{
+  color: #8A4B08;
+  font-family: "AvenirNext", sans-serif;
+  font-weight: bold;
+  font-size: 18;
+}
 a{
 color: #8A4B08;
 text-decoration: none;
@@ -177,7 +186,7 @@ text-decoration: none;
   background-color: #A051E5;
 }
 #curvePage{
-  border: 10px solid:red;
+  border: 0px solid:red;
   background-color: white;
   border-radius: 100%;
 }
@@ -197,7 +206,7 @@ text-decoration: none;
 .rideDes{
   position: relative;
   top:-100px;
-  border: 1px solid red;
+  border: 0px solid red;
   padding-left : 120px;
   padding-right : 120px;
   padding-bottom: 20px;
@@ -218,6 +227,21 @@ text-decoration: none;
     background: #FFFFFF;
     box-shadow: -3px 3px 13px 2px rgba(0,0,0,0.50);
 }
+.rectVideo {
+    display:block;
+    position:absolute;
+    align-items: center;
+    justify-content: center;
+    width:95%;
+    height:15%;
+    bottom:0;
+    left:0;
+    right:0;
+    margin: 0 auto;
+    border-radius: 15px 15px 0px 0px;
+    background: #FFFFFF;
+    box-shadow: -3px 3px 13px 2px rgba(0,0,0,0.50);
+}
 .btn-confirm{
     position: absolute;
     display: block;
@@ -232,6 +256,26 @@ text-decoration: none;
     border-radius: 25px 25px 25px 25px;
     box-shadow: -3px 3px 13px 2px rgba(0,0,0,0.50);
 }
+
+.btn-pay{
+  position: absolute;
+  display: block;
+  width:273px;
+  height:77px;
+  bottom:18%;
+  right: 0;
+  left:0;
+  margin: 0 auto;
+  background-image: url("data/icon/confirm.png");
+  max-width: 47%;
+  max-height: 19%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: -3px 3px 13px 2px rgba(0,0,0,0.50);
+}
+
 .btn-exit{
   text-align: center;
   position: absolute;
@@ -248,19 +292,18 @@ text-decoration: none;
   bottom:10%;
   margin: 0;
 }
-.rectVideo {
-    display:block;
-    position:absolute;
-    width:95%;
-    height:15%;
-    bottom:0;
-    left:0;
-    right:0;
+.btn-restart{
+/* position: relative;
+text-align: center;
+margin: 0 auto; */
+    position: absolute;
+    bottom: 2%;
+    margin: 0;
+    right: 0;
+    left: 0;
     margin: 0 auto;
-    border-radius: 15px 15px 0px 0px;
-    background: #FFFFFF;
-    box-shadow: -3px 3px 13px 2px rgba(0,0,0,0.50);
 }
+
 .resizeRideTitle{
   position: absolute;
   left: 68%;
@@ -291,6 +334,21 @@ text-decoration: none;
   height: auto;
   z-index: -100;
 }
+#page5{
+  margin: 0;
+  display: flex;
+  width:100%; height:100%;
+  object-fit: cover;
+  position:absolute;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(-45deg, #F5ECCE, #FF8000, #FF0000, #BCF5A9,#BFFF00);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
 .thankPage{
   margin: 0;
   display: flex;
@@ -299,7 +357,7 @@ text-decoration: none;
   position:absolute;
   align-items: center;
   justify-content: center;
-	color: #fff;
+	color: #FFFFFF;
   background: linear-gradient(-45deg, #F5ECCE, #FF8000, #FF0000, #BCF5A9,#BFFF00);
 	background-size: 400% 400%;
 	-webkit-animation: Gradient 15s ease infinite;
@@ -315,14 +373,17 @@ text-decoration: none;
 #rideCost{
   font-family: "AvenirNext", sans-serif;
   font-weight: bold;
+  color:#8A4B08;
+  font-size: 30px;
 }
 #callnewRide{
-  display:block;
-  position:absolute;
+  display: block;
+  position: sticky;
   align-items: center;
   justify-content: center;
-  bottom: 3%;
-  padding: 10px;
+  text-align: center
+  margin: 0 auto;
+  padding: 20px;
   border: 0px;
   border-radius: 25px 25px 25px 25px;
     background: linear-gradient(-45deg,#F5ECCE, #FF8000, #FF0000, #BCF5A9,#BFFF00);
@@ -332,5 +393,45 @@ text-decoration: none;
     animation: Gradient 15s ease infinite;
   /* background: #FFFFFF; */
   font-weight: bold;
-  opacity: 0.8;
+  margin-top: 400px;
+
 }
+#timer{
+  position: relative;
+}
+
+.rectVideo h3{
+  position: relative;
+  left: -30px;
+  top:22px;
+}
+.centerRect{
+  width:50%; height:50%;
+  display: flex;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #FFFFFF;
+  border: 0px;
+  border-radius: 25px 25px 25px 25px;
+  margin: 0 auto;
+}
+.centerText{
+  position:relative;
+  display:block;
+  align-items: center;
+  justify-content: center;
+}
+.centerText p{
+  font-size: 20px;
+  margin: 28px;
+}
+/* display: block;
+position: absolute;
+border: 2px solid red;
+top:-100px;
+padding-left : 120px;
+padding-right : 120px;
+padding-bottom: 20px;
+margin: 0; */
