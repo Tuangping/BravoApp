@@ -1,22 +1,25 @@
 $(document).ready(function(){
   var page = 0,
       pageContainers = $('.page-container');
-
+  var rideCost= 0;
   $('.round-button.butt-r1').click(function(e){
     e.preventDefault();
     page = 1;
+    rideCost= 139;
     pageContainers.removeClass('active');
     $('.page-container#page'+page).addClass('active');
   });
   $('.round-button.butt-r2').click(function(e){
     e.preventDefault();
     page = 2;
+    rideCost= 250;
     pageContainers.removeClass('active');
     $('.page-container#page'+page).addClass('active');
   });
   $('.round-button.butt-r3').click(function(e){
     e.preventDefault();
     page = 3;
+    rideCost= 302;
     pageContainers.removeClass('active');
     $('.page-container#page'+page).addClass('active');
   });
@@ -49,12 +52,12 @@ $(document).ready(function(){
   $('.btn-pay').click(function(e){
     e.preventDefault();
     $('.page-container#page'+page).append('<iframe id="myframe" width="1000" height="500" style="z-index:100;" src="readytoPay.html"></iframe>');
+    amount_money.amount= rideCost;
     var dataParameter = {
       amount_money: {
-        amount:        "100", //2 digit decimal 100 = $1. Square App minimum payment is $1.
-        currency_code: "USD"
+          amount:        "", //2 digit decimal 100 = $1. Square App minimum payment is $1.
+          currency_code: "USD"
       },
-
       // Replace this value with your application's callback URL
       callback_url: "https://tuangping.github.io/bravoapp",
 
