@@ -250,3 +250,7 @@ h2{
   height: auto;
   z-index: -100;
 }
+#rideCost{
+  font-family: "AvenirNext", sans-serif;
+  font-weight: bold;
+}

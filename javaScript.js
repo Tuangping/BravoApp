@@ -1,4 +1,5 @@
 var rideCost = 120;
+var rideCost_ui = "$1.20";
 $(document).ready(function(){
 
   var page = 0,
@@ -8,6 +9,7 @@ $(document).ready(function(){
     e.preventDefault();
     page = 1;
     rideCost= 139;
+    rideCost_ui = "$1.39";
     pageContainers.removeClass('active');
     $('.page-container#page'+page).addClass('active');
     console.log(rideCost);
@@ -18,6 +20,7 @@ $(document).ready(function(){
     e.preventDefault();
     page = 2;
     rideCost= 250;
+    rideCost_ui = "$2.50";
     pageContainers.removeClass('active');
     $('.page-container#page'+page).addClass('active');
     console.log(rideCost);
@@ -27,6 +30,7 @@ $(document).ready(function(){
     e.preventDefault();
     page = 3;
     rideCost= 302;
+    rideCost_ui = "$3.02"
     pageContainers.removeClass('active');
     $('.page-container#page'+page).addClass('active');
     console.log(rideCost);
@@ -41,7 +45,7 @@ $(document).ready(function(){
   $('.btn-restart').click(function(e){
     e.preventDefault();
     // document.getElementById( 'myframe' ).setAttribute( 'src', '' );
-    $('iframe').remove();
+  //  $('iframe').remove();
     page = 0;
     pageContainers.removeClass('active');
     $('.page-container#page'+page).addClass('active');
@@ -57,12 +61,12 @@ $(document).ready(function(){
       page = 5;
       pageContainers.removeClass('active');
       $('.page-container#page'+page).addClass('active');
+      document.getElementById('rideCost').innerHTML = rideCost_ui;
   });
   $('.btn-pay').click(function(e){
     e.preventDefault();
-    $('.page-container#page'+page).append('<iframe id="myframe" width="1000" height="500" style="z-index:100;" src="readytoPay.html"></iframe>');
-    document.getElementById('rideCost').innerHTML = rideCost;
-    console.log("lastpage: "+page);
+    //$('.page-container#page'+page).append('<iframe id="myframe" width="1000" height="500" style="z-index:100;" src="readytoPay.html"></iframe>');
+    console.log("go to Square App");
     callSquare();
   });
 });
@@ -75,7 +79,7 @@ function callSquare(){
         currency_code: "USD"
     },
     // Replace this value with your application's callback URL
-    callback_url: "https://tuangping.github.io/bravoapp",
+    callback_url: "https://tuangping.github.io/bravoapp/readytoPay.html",
 
     // Replace this value with your application's ID
     client_id: "sq0idp-FlAazmCX59x2_GX2DstntA",
