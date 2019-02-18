@@ -245,16 +245,27 @@ text-decoration: none;
 .btn-confirm{
     position: absolute;
     display: block;
-    width:273px;
-    height:77px;
+    /* width:273px;
+    height:77px; */
     bottom:18%;
     right: 0;
     left:0;
     margin: 0 auto;
-    background-image: url("data/icon/confirm.png");
-    background-repeat: no-repeat;
+    width: 160px;
+    height: 30px;
+    /* background-image: url("data/icon/confirm.png");
+    background-repeat: no-repeat; */
+    background-color: #8A4B08;
     border-radius: 25px 25px 25px 25px;
     box-shadow: -3px 3px 13px 2px rgba(0,0,0,0.50);
+    text-align: center;
+    padding-top: 10px;
+    color: #FFFFFF;
+}
+.btn-confirm a{
+    font-size: 30;
+    font-family: "AvenirNext", sans-serif;
+    font-weight: bold;
 }
 
 .btn-pay{
@@ -308,17 +319,22 @@ margin: 0 auto; */
   position: absolute;
   left: 68%;
   bottom: 3%;
-  max-width: 7%;
-  max-height: 7%;
+
 }
 #rideTitle_1{
   margin-left: -170px;
+  max-width: 7%;
+  max-height: 7%;
 }
 #rideTitle_2{
   margin-left: -17px;
+  max-width: 7%;
+  max-height: 7%;
 }
 #rideTitle_3{
   margin-left: 130px;
+  max-width: 7%;
+  max-height: 7%;
 }
 
 #myVideo{
@@ -374,7 +390,7 @@ margin: 0 auto; */
   font-family: "AvenirNext", sans-serif;
   font-weight: bold;
   color:#8A4B08;
-  font-size: 30px;
+  font-size: 30;
 }
 #callnewRide{
   display: block;
@@ -387,6 +403,7 @@ margin: 0 auto; */
   margin: 0 auto;
   padding: 20px;
   border: 0px;
+  background-color: #FFFFFF;
   /* border-radius: 25px 25px 25px 25px;
     background: linear-gradient(-45deg,#F5ECCE, #FF8000, #FF0000, #BCF5A9,#BFFF00);
     background-size: 1200% 1200%;
