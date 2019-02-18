@@ -1,8 +1,10 @@
 var rideCost = 120;
 var rideCost_ui = "$1.20";
 var now = new Date();
-var endSecond = 600;
+var endSecond = 600;// 60=1min
 var timeup = now.setSeconds(now.getSeconds() + endSecond);
+console.log("timeup: "+ timeup);
+console.log("getTime: "+now.getTime());
 //var timeup = now.setHours(now.getHours() + 1);
 var counter = setInterval(timer, 1000);
 $(document).ready(function(){
@@ -58,8 +60,10 @@ $(document).ready(function(){
   $('.btn-confirm').click(function(e){
       e.preventDefault();
       timeup = now.setSeconds(now.getSeconds() + endSecond);
-      counter = setInterval(timer, 1000);
+      counter = setInterval(timer.bind(this), 1000);
       console.log(now.setSeconds+ " / "+ timeup);
+      console.log("timeup: "+ timeup);
+      console.log("getTime: "+now.getTime());
       page = 4;
       pageContainers.removeClass('active');
       $('.page-container#page'+page).addClass('active');
@@ -121,3 +125,18 @@ function timer() {
   document.getElementById("timer").innerHTML = minutes + ":" + seconds;
 }
 console.log(now.setSeconds(now.getSeconds())+ " / "+ timeup);
+
+Function.prototype.bind = function(parent) {
+    var f = this;
+    var args = [];
+
+    for (var a = 1; a < arguments.length; a++) {
+        args[args.length] = arguments[a];
+    }
+
+    var temp = function() {
+        return f.apply(parent, args);
+    }
+
+    return(temp);
+}
