@@ -60,7 +60,6 @@ $(document).ready(function(){
       timeup = now.setSeconds(now.getSeconds() + endSecond);
       counter = setInterval(timer, 1000);
       console.log(now.setSeconds+ " / "+ timeup);
-      timer();
       page = 4;
       pageContainers.removeClass('active');
       $('.page-container#page'+page).addClass('active');
