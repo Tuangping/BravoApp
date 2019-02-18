@@ -399,6 +399,8 @@ margin: 0 auto; */
 /* position: relative;
 text-align: center;
 margin: 0 auto; */
+    display:block;
+    position: absolute;
     bottom: 2%;
     margin: 0;
     right: 0;
