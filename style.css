@@ -296,6 +296,7 @@ text-decoration: none;
 /* position: relative;
 text-align: center;
 margin: 0 auto; */
+    position: absolute;
     bottom: 2%;
     margin: 0;
     right: 0;
@@ -392,7 +393,7 @@ margin: 0 auto; */
     animation: Gradient 15s ease infinite;
   /* background: #FFFFFF; */
   font-weight: bold;
-  margin-top: 400px;
+  margin-top: 50px;
 
 }
 #timer{
