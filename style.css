@@ -372,6 +372,7 @@ margin: 0 auto; */
   object-fit: cover;
   position:absolute;
   align-items: center;
+  text-align: center;
   justify-content: center;
 	color: #FFFFFF;
   background: linear-gradient(-45deg, #F5ECCE, #FF8000, #FF0000, #BCF5A9,#BFFF00);
@@ -394,7 +395,7 @@ margin: 0 auto; */
 }
 #callnewRide{
   display: block;
-  position: sticky;
+  position: absolute;
   width: 300px;
   height: 80px;
   align-items: center;
@@ -403,6 +404,7 @@ margin: 0 auto; */
   margin: 0 auto;
   padding: 20px;
   border: 0px;
+  bottom:
   background-color: #FFFFFF;
   /* border-radius: 25px 25px 25px 25px;
     background: linear-gradient(-45deg,#F5ECCE, #FF8000, #FF0000, #BCF5A9,#BFFF00);
@@ -412,7 +414,6 @@ margin: 0 auto; */
     animation: Gradient 15s ease infinite; */
   /* background: #FFFFFF; */
   font-weight: bold;
-  margin-top: 150px;
 }
 .btn-goHome{
 /* position: relative;
