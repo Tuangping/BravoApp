@@ -260,20 +260,20 @@ text-decoration: none;
 .btn-pay{
   position: absolute;
   display: block;
-  width:273px;
-  height:77px;
-  bottom:18%;
+  bottom: 18%;
   right: 0;
-  left:0;
+  left: 0;
   margin: 0 auto;
-  background-image: url("data/icon/confirm.png");
+  /* background-image: url(data/icon/confirm.png); */
   max-width: 47%;
-  max-height: 19%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  height: 30px;
+  color: #FFFFFF;
+  background-color: #8A4B08;
   border-radius: 25px 25px 25px 25px;
   box-shadow: -3px 3px 13px 2px rgba(0,0,0,0.50);
+  font-style: bold;
+  text-align: center;
+  padding-top: 6px;
 }
 
 .btn-exit{
@@ -296,7 +296,6 @@ text-decoration: none;
 /* position: relative;
 text-align: center;
 margin: 0 auto; */
-    position: absolute;
     bottom: 2%;
     margin: 0;
     right: 0;
