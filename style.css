@@ -303,16 +303,6 @@ margin: 0 auto; */
     left: 0;
     margin: 0 auto;
 }
-.btn-goHome{
-/* position: relative;
-text-align: center;
-margin: 0 auto; */
-    bottom: 2%;
-    margin: 0;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
-}
 
 .resizeRideTitle{
   position: absolute;
@@ -395,16 +385,25 @@ margin: 0 auto; */
   margin: 0 auto;
   padding: 20px;
   border: 0px;
-  border-radius: 25px 25px 25px 25px;
+  /* border-radius: 25px 25px 25px 25px;
     background: linear-gradient(-45deg,#F5ECCE, #FF8000, #FF0000, #BCF5A9,#BFFF00);
     background-size: 1200% 1200%;
     -webkit-animation: Gradient 15s ease infinite;
     -moz-animation: Gradient 15s ease infinite;
-    animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite; */
   /* background: #FFFFFF; */
   font-weight: bold;
   margin-top: 150px;
-
+}
+.btn-goHome{
+/* position: relative;
+text-align: center;
+margin: 0 auto; */
+    bottom: 2%;
+    margin: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
 }
 #timer{
   position: relative;
