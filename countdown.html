@@ -9,7 +9,7 @@
     function counter(selector, seconds){
         $(selector).html(timeDisplay(seconds));
         if(seconds>0){
-            setTimeout(function(){
+            holdTimeout = setTimeout(function(){
                 counter(selector, seconds-1);
             }, 1000);
         }
