@@ -8,12 +8,24 @@ var endSecond = 60;// 60=1min
 //var timeup = now.setHours(now.getHours() + 1);
 var holdTimeout;
 
+Function.prototype.bind = function(parent){
+  var f = this,
+      args = [];
+  for(var a=1; a<arguments.length; a++){
+    args[args.length] = arguments[a];
+  }
+
+  var temp = function(){
+    return f.apply(parent, args);
+  }
+  return temp;
+}
 function counter(selector, seconds){
     $(selector).html(timeDisplay(seconds));
     if(seconds>0){
         holdTimeout = setTimeout(function(){
             counter(selector, seconds-1);
-        }, 1000);
+        }.bind(this), 1000);
     }
 }
 function timeDisplay(seconds){
