@@ -63,7 +63,7 @@ $(document).ready(function(){
       // console.log(now.setSeconds+ " / "+ timeup);
       // console.log("timeup: "+ timeup);
       // console.log("getTime: "+now.getTime());
-      // holdTimeout=counter('#timer', endSecond );
+      holdTimeout=counter('#timer', endSecond );
       page = 4;
       pageContainers.removeClass('active');
       $('.page-container#page'+page).addClass('active');
@@ -71,7 +71,7 @@ $(document).ready(function(){
   $('.btn-end').click(function(e){
       e.preventDefault();
       // clearInterval(counter);
-      // clearTimeout(holdTimeout);
+      clearTimeout(holdTimeout);
       // timeup = now.setSeconds(now.getSeconds() + endSecond);
       page = 5;
       pageContainers.removeClass('active');
@@ -113,25 +113,25 @@ function callSquare(){
     console.log("amount_money: "+ dataParameter.amount_money.amount);
 }
 
-// function counter(selector, seconds){
-//         $(selector).html(timeDisplay(seconds));
-//         if(seconds>0){
-//             setTimeout(function(){
-//                 counter(selector, seconds-1);
-//             }, 1000);
-//         }else{
-//           document.getElementById("timer").innerHTML = "now is at the end of the road";
-//           //       clearInterval(counter);
-//           clearTimeout(function(){
-//               counter(selector, seconds-1);
-//           }, 1000);
-//         }
-//     }
-// function timeDisplay(seconds){
-//         let secs = (seconds % 60);
-//         if(secs<10) secs = '0' + secs;
-//         return Math.floor(seconds / 60) + ':' + secs;
-// }
+function counter(selector, seconds){
+        $(selector).html(timeDisplay(seconds));
+        if(seconds>0){
+            setTimeout(function(){
+                counter(selector, seconds-1);
+            }, 1000);
+        }else{
+          document.getElementById("timer").innerHTML = "now is at the end of the road";
+          //       clearInterval(counter);
+          clearTimeout(function(){
+              counter(selector, seconds-1);
+          }, 1000);
+        }
+    }
+function timeDisplay(seconds){
+        let secs = (seconds % 60);
+        if(secs<10) secs = '0' + secs;
+        return Math.floor(seconds / 60) + ':' + secs;
+}
 
 // function timer() {
 //   now = new Date();
