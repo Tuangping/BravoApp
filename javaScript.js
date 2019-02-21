@@ -1,12 +1,11 @@
 var rideCost = 120;
 var rideCost_ui = "$1.20";
-var now = new Date();
-var endSecond = 15;// 60=1min
-var timeup = now.setSeconds(now.getSeconds() + endSecond);
-console.log("timeup: "+ timeup);
-console.log("getTime: "+now.getTime());
+// var now = new Date();
+// var endSecond = 15;// 60=1min
+// var timeup = now.setSeconds(now.getSeconds() + endSecond);
+// console.log("timeup: "+ timeup);
+// console.log("getTime: "+now.getTime());
 //var timeup = now.setHours(now.getHours() + 1);
-// var counter = setInterval(timer, 1000);
 $(document).ready(function(){
 
   var page = 0,
@@ -59,11 +58,11 @@ $(document).ready(function(){
   });
   $('.btn-confirm').click(function(e){
       e.preventDefault();
-      counter = setInterval(timer.bind(this), 1000);
-      console.log(now.setSeconds+ " / "+ timeup);
-      console.log("timeup: "+ timeup);
-      console.log("getTime: "+now.getTime());
-      // counter('#timer', 120);
+      // counter = setInterval(timer.bind(this), 1000);
+      // console.log(now.setSeconds+ " / "+ timeup);
+      // console.log("timeup: "+ timeup);
+      // console.log("getTime: "+now.getTime());
+      counter('#timer', 120);
       page = 4;
       pageContainers.removeClass('active');
       $('.page-container#page'+page).addClass('active');
@@ -112,46 +111,46 @@ function callSquare(){
     console.log("amount_money: "+ dataParameter.amount_money.amount);
 }
 
-// function counter(selector, seconds){
-//         $(selector).html(timeDisplay(seconds));
-//         if(seconds>0){
-//             setTimeout(function(){
-//                 counter(selector, seconds-1);
-//             }, 1000);
-//         }
-//     }
-//     function timeDisplay(seconds){
-//         let secs = (seconds % 60);
-//         if(secs<10) secs = '0' + secs;
-//         return Math.floor(seconds / 60) + ':' + secs;
+function counter(selector, seconds){
+        $(selector).html(timeDisplay(seconds));
+        if(seconds>0){
+            setTimeout(function(){
+                counter(selector, seconds-1);
+            }, 1000);
+        }
+    }
+function timeDisplay(seconds){
+        let secs = (seconds % 60);
+        if(secs<10) secs = '0' + secs;
+        return Math.floor(seconds / 60) + ':' + secs;
+}
+
+// function timer() {
+//   now = new Date();
+//   count = Math.round((timeup - now)/1000);
+//   if (now > timeup) {
+//       //window.location = "/logout"; //or somethin'
+//       document.getElementById("timer").innerHTML = "now is at the end of the road";
+//       clearInterval(counter);
+//       return;
+//   }
+//   var seconds = Math.floor((count%60));
+//   var minutes = Math.floor((count/60) % 60);
+//   document.getElementById("timer").innerHTML = minutes + ":" + seconds;
 // }
-
-function timer() {
-  now = new Date();
-  count = Math.round((timeup - now)/1000);
-  if (now > timeup) {
-      //window.location = "/logout"; //or somethin'
-      document.getElementById("timer").innerHTML = "now is at the end of the road";
-      clearInterval(counter);
-      return;
-  }
-  var seconds = Math.floor((count%60));
-  var minutes = Math.floor((count/60) % 60);
-  document.getElementById("timer").innerHTML = minutes + ":" + seconds;
-}
-console.log(now.setSeconds(now.getSeconds())+ " / "+ timeup);
-
-Function.prototype.bind = function(parent) {
-    var f = this;
-    var args = [];
-
-    for (var a = 1; a < arguments.length; a++) {
-        args[args.length] = arguments[a];
-    }
-
-    var temp = function() {
-        return f.apply(parent, args);
-    }
-
-    return(temp);
-}
+// console.log(now.setSeconds(now.getSeconds())+ " / "+ timeup);
+//
+// Function.prototype.bind = function(parent) {
+//     var f = this;
+//     var args = [];
+//
+//     for (var a = 1; a < arguments.length; a++) {
+//         args[args.length] = arguments[a];
+//     }
+//
+//     var temp = function() {
+//         return f.apply(parent, args);
+//     }
+//
+//     return(temp);
+// }
