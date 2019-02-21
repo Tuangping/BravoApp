@@ -1,11 +1,12 @@
 var rideCost = 120;
 var rideCost_ui = "$1.20";
 // var now = new Date();
-// var endSecond = 15;// 60=1min
+var endSecond = 15;// 60=1min
 // var timeup = now.setSeconds(now.getSeconds() + endSecond);
 // console.log("timeup: "+ timeup);
 // console.log("getTime: "+now.getTime());
 //var timeup = now.setHours(now.getHours() + 1);
+var holdTimeout;
 $(document).ready(function(){
 
   var page = 0,
@@ -62,15 +63,16 @@ $(document).ready(function(){
       // console.log(now.setSeconds+ " / "+ timeup);
       // console.log("timeup: "+ timeup);
       // console.log("getTime: "+now.getTime());
-      counter('#timer', 120);
+      holdTimeout=counter('#timer', endSecond );
       page = 4;
       pageContainers.removeClass('active');
       $('.page-container#page'+page).addClass('active');
   });
   $('.btn-end').click(function(e){
       e.preventDefault();
-      clearInterval(counter);
-      timeup = now.setSeconds(now.getSeconds() + endSecond);
+      // clearInterval(counter);
+      clearTimeout(holdTimeout);
+      // timeup = now.setSeconds(now.getSeconds() + endSecond);
       page = 5;
       pageContainers.removeClass('active');
       $('.page-container#page'+page).addClass('active');
@@ -117,6 +119,9 @@ function counter(selector, seconds){
             setTimeout(function(){
                 counter(selector, seconds-1);
             }, 1000);
+        }else{
+          document.getElementById("timer").innerHTML = "now is at the end of the road";
+          //       clearInterval(counter);
         }
     }
 function timeDisplay(seconds){
