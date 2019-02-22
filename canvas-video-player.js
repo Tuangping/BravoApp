@@ -9,7 +9,7 @@ var CanvasVideoPlayer = function(options) {
 	var i;
 
 	this.options = {
-		framesPerSecond: 25,
+		framesPerSecond: 29.97, //original 25
 		hideVideo: true,
 		autoplay: false,
 		makeLoop: false,
@@ -269,5 +269,6 @@ CanvasVideoPlayer.prototype.loop = function() {
 };
 
 CanvasVideoPlayer.prototype.drawFrame = function() {
-	this.ctx.drawImage(this.video, 0, 0, this.width, this.height);
+	// this.ctx.drawImage(this.video, 0, 0, this.width, this.height);
+		this.ctx.drawImage(this.video, 0, 0, 800, 600);
 };
