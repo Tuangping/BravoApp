@@ -1,7 +1,7 @@
 var rideCost = 120;
 var rideCost_ui = "$1.20";
 // var now = new Date();
-var endSecond = 60;// 60=1min
+var endSecond = 5;// 60=1min
 // var timeup = now.setSeconds(now.getSeconds() + endSecond);
 // console.log("timeup: "+ timeup);
 // console.log("getTime: "+now.getTime());
@@ -15,7 +15,7 @@ function counter(selector, seconds){
             counter(selector, seconds-1);
         }, 1000);
     } else{
-      document.getElementById("timer").innerHTML = "now is at the end of the road";
+      $(selector).html("is at the end of the road.")
     }
 }
 function timeDisplay(seconds){
