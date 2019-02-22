@@ -351,16 +351,16 @@ margin: 0 auto; */
   z-index: -100;
 }
 #myVideoCanvas{
-  position: absolute;
+    position: absolute;
      top: 0;
      bottom: 0;
      right: 0;
      left: 0;
      margin: auto;
-     width: auto;
-     height: auto;
-     min-width: 99%;
-     min-height: 99%;
+     min-width: 100%;
+     min-height: 100%;
+     width:100vw;
+     height:100vh;
 }
 #page5{
   margin: 0;
