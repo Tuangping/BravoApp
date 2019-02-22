@@ -14,6 +14,8 @@ function counter(selector, seconds){
         holdTimeout = setTimeout(function(){
             counter(selector, seconds-1);
         }, 1000);
+    } else{
+      document.getElementById("timer").innerHTML = "now is at the end of the road";
     }
 }
 function timeDisplay(seconds){
@@ -86,7 +88,7 @@ $(document).ready(function(){
             _('#myVideo').currentTime = 0;
             _('#myVideo').play();
         }
-        
+
         page = 4;
         pageContainers.removeClass('active');
         $('.page-container#page'+page).addClass('active');
