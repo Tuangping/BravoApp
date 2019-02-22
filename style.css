@@ -353,13 +353,15 @@ margin: 0 auto; */
 #myVideoCanvas{
     position: absolute;
      top: 0;
-     /* bottom: 0;
-     right: 0; */
+     bottom: 0;
+     right: 0;
      left: 0;
      margin: auto;
      /* transform:scale(2); */
      min-width: 50%;
      min-height: 50%;
+     width: auto;
+     height: auto;
 }
 #page5{
   margin: 0;
