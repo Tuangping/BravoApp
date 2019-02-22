@@ -357,6 +357,10 @@ margin: 0 auto; */
      right: 0;
      left: 0;
      margin: auto;
+     width: auto;
+     height: auto;
+     /* min-width: 50%;
+     min-height: 50%; */
 }
 #page5{
   margin: 0;
