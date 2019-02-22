@@ -1,7 +1,7 @@
 var rideCost = 120;
 var rideCost_ui = "$1.20";
 // var now = new Date();
-var endSecond = 5;// 60=1min
+var endSecond = 10;// 60=1min
 // var timeup = now.setSeconds(now.getSeconds() + endSecond);
 // console.log("timeup: "+ timeup);
 // console.log("getTime: "+now.getTime());
