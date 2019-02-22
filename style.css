@@ -358,8 +358,8 @@ margin: 0 auto; */
      left: 0;
      margin: auto;
      /* transform:scale(2); */
-     min-width: 60%;
-     min-height: 60%;
+     min-width: 50%;
+     min-height: 50%;
 }
 #page5{
   margin: 0;
