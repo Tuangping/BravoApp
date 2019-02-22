@@ -359,8 +359,8 @@ margin: 0 auto; */
      margin: auto;
      width: auto;
      height: auto;
-     /* min-width: 50%;
-     min-height: 50%; */
+     min-width: 50%;
+     min-height: 50%;
 }
 #page5{
   margin: 0;
