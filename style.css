@@ -359,9 +359,9 @@ margin: 0 auto; */
      left: 0;
      margin: auto;
      /* transform:scale(2); */
-     /* width: auto;
+      width: auto;
      height: auto;
-     z-index: -100; */
+     /*z-index: -100; */
 }
 #page5{
   margin: 0;
