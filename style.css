@@ -1,3 +1,9 @@
+@media min-width: 62em{
+ #myVideo {
+    display:block;
+ }
+}
+
 @font-face {
     font-family: "AvenirNext";
     src: url('data/font/avenir-next-regular.ttf') format("truetype");
@@ -339,7 +345,7 @@ margin: 0 auto; */
 
 #myVideo{
   position:absolute;
-  display: block;
+  /* display: block; */
   top:0;
   left:-10;
   right:-10;
@@ -349,6 +355,7 @@ margin: 0 auto; */
   width: auto;
   height: auto;
   z-index: -100;
+
 }
 #myVideoCanvas{
     position: absolute;
@@ -357,7 +364,7 @@ margin: 0 auto; */
      bottom: 0;
      right: 0;
      left: 0;
-     margin: 0 auto;
+     margin:  auto;
      transform:scale(2);
      width: auto;
      height: auto;
