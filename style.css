@@ -1,8 +1,8 @@
-@media min-width: 62em{
+/* @media min-width: 62em{
  #myVideo {
     display:block;
  }
-}
+} */
 
 @font-face {
     font-family: "AvenirNext";
@@ -345,7 +345,7 @@ margin: 0 auto; */
 
 #myVideo{
   position:absolute;
-  /* display: block; */
+  display: block;
   top:0;
   left:-10;
   right:-10;
