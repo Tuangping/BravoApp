@@ -198,10 +198,10 @@ CanvasVideoPlayer.prototype.setCanvasSize = function() {
 	this.width = this.canvas.clientWidth;
 	this.height = this.canvas.clientHeight;
 
-	// this.canvas.setAttribute('width', this.width);
-	// this.canvas.setAttribute('height', this.height);
-	this.canvas.setAttribute('width', 800);
-	this.canvas.setAttribute('height', 600);
+	this.canvas.setAttribute('width', this.width);
+	this.canvas.setAttribute('height', this.height);
+	// this.canvas.setAttribute('width', 800);
+	// this.canvas.setAttribute('height', 600);
 };
 
 CanvasVideoPlayer.prototype.play = function() {
